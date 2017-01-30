@@ -1,0 +1,31 @@
+﻿<div>
+
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                <th>productId</th>
+                <th>productName</th>
+                <th>productCode</th>
+                <th>releaseDate</th>
+                <th>description</th>
+                <th>price</th>
+                <th>starRating</th>
+                <th>imageUrl</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in  model.products">
+                <td>{{x.productId}}</td>
+                <td>{{x.productName}}</td>
+                <td>{{x.productCode}}</td>
+                <td>{{x.releaseDate}}</td>
+                <td>{{x.description}}</td>
+                <td>{{x.price}}</td>
+                <td>{{x.starRating}}</td>
+                <td>{{x.imageUrl}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,47 @@
+﻿<div>
+    
+    <!--<div ng-dropdown-multiselect="" ng-options="item.productName for item in moin.products" selected-model="example1model"></div>-->
+<br />
+    
+                <div>
+                    <div class="dropdown open">
+                        <button class="dropdown-toggle btn btn-info" data-toggle="dropdown" >Select ProductName <span class="caret"></span></button>
+                        <div class="dropdown-menu">
+                            <span  >
+                                <button class="btn btn-info" ng-click="moin.selectAll()">
+                                    Select All
+                                </button>
+                                <button class="btn btn-info" ng-click="moin.deselectAll()">
+                                    Deselect All
+                                </button><br />
+                                <span ng-repeat="item in moin.products track by $index" ng-click="moin.Itemclicked(item.productName,$index)" >
+
+                                <i class="fa" ng-class="{'fa-check-square-o': moin.model[$index], 'fa-square-o': !moin.model[$index]}" aria-hidden="true">&nbsp;{{item.productName}}</i><br />
+                                </span>
+                             
+                            </span>
+                           
+                        </div>
+                    </div>
+                </div>
+            
+            
+    <br />
+    <br /><br />
+<br />
+    <br /><br /><br /><br />
+
+    {{moin.selectedArr}}
+
+
+    <br /><br />
+
+            <prod-table></prod-table>
+            <select ng-model="moin.selectedValue"  name="multicheckbox[]" ng-options="item.productName for item in moin.products" multiple style="height:90px;"></select>
+            <!--<select>
+                <option value="value" ng-model="$parent.moin.selectedValue" ng-repeat="x in moin.products">{{x}}</option>
+            </select>-->
+            <br />
+            
+            The selected value is  {{moin.selectedValue}}
+        </div>
